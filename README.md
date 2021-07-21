@@ -9,3 +9,7 @@ It is recommended that you create this structure inside of the sb-admin-pro-angu
 ```bash
 sb-admin-pro-angular/src/styles
 ```
+
+## Layout
+
+![Alt text](images/layout.png?raw=true "Combines Styles Layout")
