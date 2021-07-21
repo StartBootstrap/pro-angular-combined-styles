@@ -1,0 +1,57 @@
+// * * * * * * * * * * * * * *
+// * * Import core styles  * *
+// * * * * * * * * * * * * * *
+
+// Includes Bootstrap and styling shared across
+// all themes using the Start Bootstrap Pro
+// design language
+
+@import './core/styles';
+
+// * * * * * * * * * * * * * * * * * *
+// * * Import SB Admin Pro styles  * *
+// * * * * * * * * * * * * * * * * * *
+
+// Includes styling specific to the SB Admin Pro
+// theme - must load after core styles
+
+@import './admin/styles';
+
+// * * * * * * * * * * * * * * * * * * * *
+// * * Import Angular specific styles  * *
+// * * * * * * * * * * * * * * * * * * * *
+
+// Styling specific to your project
+// The file imported below is intentionally blank and should
+// be used to create styling specific to your project
+
+@import './sb-admin-pro-angular';
+
+// * * * * * * * * * * * * * * * * * *
+// * * Import SB UI Kit Pro styles * *
+// * * * * * * * * * * * * * * * * * *
+
+// Includes styling specific to the SB UI Kit Pro
+// theme - must load after core styles!
+
+@import './ui-kit/styles';
+
+// * * * * * * * * * * * * * * * * * * * *
+// * * Import Angular specific styles  * *
+// * * * * * * * * * * * * * * * * * * * *
+
+// Styling specific to your project
+// The file imported below is intentionally blank and should
+// be used to create styling specific to your project
+
+@import './sb-ui-kit-pro-angular';
+
+// * * * * * * * * * * * * * * *
+// * * Import project styles * *
+// * * * * * * * * * * * * * * *
+
+// Styling specific to your project
+// The below file is intentionally blank and should
+// be used to create styling specific to your project
+
+@import './project';

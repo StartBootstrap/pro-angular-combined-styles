@@ -1,0 +1,62 @@
+.pointer {
+    cursor: pointer !important;
+}
+
+i-feather {
+    height: auto !important;
+    width: auto !important;
+}
+
+// Set icon sizing within icon stacks for Angular icon sets
+
+.icon-stack {
+    i-feather {
+        height: 1rem !important;
+        width: 1rem !important;
+    }
+}
+
+.icon-stack-lg {
+    i-feather {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+    }
+}
+
+.icon-stack-xl {
+    i-feather {
+        height: 1.75rem !important;
+        width: 1.75rem !important;
+    }
+}
+
+// Set icon size within text arrow icon utility for Angular icon sets
+.text-arrow-icon {
+    i-feather {
+        height: inherit !important;
+        width: inherit !important;
+    }
+}
+
+// Line height utility for parent elements containing icons
+
+.lh-1 {
+    line-height: 1 !important;
+}
+
+// Fix for dropdown arrors toggling correctly using ngBootstrap
+
+.dropdown {
+    &.show {
+        .dropdown-arrow {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+// Fix for dropdown menu end
+
+.dropdown-menu-end {
+    left: auto;
+    right: 0;
+}

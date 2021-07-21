@@ -1,0 +1,314 @@
+// Creates a pseudo element before TOC items so the scrollspy can detect the item at the proper point
+[sbproTocItem]::before {
+    display: block;
+    content: '';
+    margin-top: calc((#{$grid-gutter-width} - 1px) * -1);
+    height: calc(#{$grid-gutter-width} - 1px);
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+// For usage with Angular Feather
+i-feather {
+    display: inline-flex !important;
+    height: auto !important;
+    width: auto !important;
+
+    svg {
+        height: 100%;
+        width: 100%;
+        vertical-align: top;
+    }
+}
+
+.feather-xl {
+    .feather {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+    }
+}
+
+// Adjust the top position of the sticky nav Angular version
+.nav-sticky {
+    top: $grid-gutter-width;
+}
+
+// Add cursor to dropdown item links
+.dropdown-item {
+    cursor: pointer;
+}
+
+// Adjust the dropdown menu position within the navbar component when using ng-bootstrap dropdowns
+.navbar {
+    .dropdown-menu {
+        top: calc(#{$navbar-padding-y} + 0.5rem) !important;
+    }
+}
+
+// Override behavior of the notifications dropdown icons - adjustments for angular feather and angular fontawesome
+.dropdown-notifications {
+    .dropdown-menu {
+        .dropdown-notifications-header {
+
+            fa-icon,
+            i-feather {
+                height: 0.85rem;
+                width: 0.85rem;
+            }
+
+            fa-icon,
+            i-feather .feather {
+                opacity: 0.7;
+            }
+        }
+
+        .dropdown-notifications-item {
+            .dropdown-notifications-item-icon {
+                i-feather {
+                    height: 0.85rem;
+                    width: 0.85rem;
+                }
+
+                fa-icon {
+                    height: 100%;
+                    width: 100%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+// Icon behavior within the icon card component
+.card-icon {
+    .card-icon-aside {
+        .card-icon {
+            display: inline-flex;
+
+            i-feather {
+                height: 3rem;
+                width: 3rem;
+            }
+        }
+    }
+}
+
+// Icon sizing within toast headers
+.toast {
+    .toast-header {
+        i-feather {
+            height: 0.9rem;
+            width: 0.9rem;
+        }
+    }
+}
+
+// Multi-Tenant flow styling
+
+.icons-org-create {
+    .icon-users {
+        .feather {
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+}
+
+.icons-org-join {
+    .icon-user {
+        .feather {
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+
+    .icon-users {
+        .feather {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+}
+
+// Collapse behavior for RTL sidenav
+.sidenav-toggled {
+    .layout-rtl {
+        #layoutSidenav {
+            #layoutSidenav_nav {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .layout-rtl {
+            #layoutSidenav {
+                #layoutSidenav_nav {
+                    transform: translateX($sidenav-base-width);
+                }
+
+                #layoutSidenav_content {
+                    margin-right: -$sidenav-base-width;
+                }
+            }
+        }
+    }
+}
+
+.layout-rtl.nav-fixed {
+    #layoutSidenav {
+        #layoutSidenav_content {
+            padding-right: 0;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        #layoutSidenav {
+            #layoutSidenav_content {
+                padding-right: $sidenav-base-width;
+            }
+        }
+    }
+}
+
+// Used for copy to clipboard
+.copy-to-clipboard {
+    position: absolute;
+    top: $spacer;
+    right: $card-spacer-x;
+    color: $primary;
+    height: 1.25rem !important;
+    width: 1.25rem !important;
+
+    &:hover {
+        color: $gray-500;
+    }
+
+    &:active {
+        color: $gray-800;
+    }
+}
+
+// Activities Table for SB Admin Pro Angular
+.table-activities {
+    font-size: 0.85rem;
+}
+
+// Button styling with feather
+// Adjust feather icons for usage within .btn component
+.btn {
+    i-feather {
+        margin-top: -1px;
+        height: $btn-font-size;
+        width: $btn-font-size;
+    }
+}
+
+.btn-lg {
+    i-feather {
+        height: $btn-font-size-lg;
+        width: $btn-font-size-lg;
+    }
+}
+
+.btn-sm {
+    i-feather {
+        height: $btn-font-size-sm;
+        width: $btn-font-size-sm;
+    }
+}
+
+.btn-xs {
+    i-feather {
+        height: $btn-font-size-xs;
+        width: $btn-font-size-xs;
+    }
+}
+
+.btn-xl {
+    i-feather {
+        height: $btn-font-size-xl;
+        width: $btn-font-size-xl;
+    }
+}
+
+// Make sure dropdown triggers get sized properly when .btn-icon is being used as a dropdown
+
+.btn-icon.dropdown-toggle {
+    .dropdown-trigger {
+        height: $btn-font-size;
+    }
+}
+
+.btn-lg.btn-icon.dropdown-toggle {
+    .dropdown-trigger {
+        height: $btn-font-size-lg;
+    }
+}
+
+.btn-sm.btn-icon.dropdown-toggle {
+    .dropdown-trigger {
+        height: $btn-font-size-sm;
+    }
+}
+
+.btn-xs.btn-icon.dropdown-toggle {
+    .dropdown-trigger {
+        height: $btn-font-size-xs;
+    }
+}
+
+.btn-xl.btn-icon.dropdown-toggle {
+    .dropdown-trigger {
+        height: $btn-font-size-xl;
+    }
+}
+
+// Corrections for topnav dropdown menus that use ngBootstrap
+.topnav {
+    .dropdown {
+        position: static;
+
+        .dropdown-menu {
+            // width: calc(100% - #{$grid-gutter-width});
+            right: $grid-gutter-width * .5 !important;
+            left: $grid-gutter-width * .5 !important;
+            transform: translate(0px, 51px) !important;
+        }
+
+        @include media-breakpoint-up(sm) {
+            position: relative;
+
+            .dropdown-menu {
+                width: auto;
+                min-width: 15rem;
+                right: 0 !important;
+                left: auto !important;
+            }
+        }
+    }
+}
+
+// Temporary fix for ng-bootstrap close button inner element
+.btn-close {
+    span {
+        display: none;
+    }
+}
+
+// Temporaty fix for ng-bootstrap alerts close button
+.alert {
+    .btn-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+// Side margin for nested nav sticky items
+.nav-sticky ul.nav>li.nav-item>a.nav-link.active~.nav {
+    margin-left: 1rem;
+}
