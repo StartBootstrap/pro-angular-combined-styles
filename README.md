@@ -1,4 +1,4 @@
-# Start Bootstrap Pro Angular Combined styles example repo
+# Start Bootstrap Pro Angular Combined Styles
 
 This repo shows how to combine the sb-admin-pro-angular and sb-ui-kit-pro-angular styles into 1 project.
 
